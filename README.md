@@ -21,6 +21,7 @@ Simular o comportamento de processos em um ambiente de escalonamento com:
     ├── src/                     # Código-fonte do simulador
     │   ├── main.c               # Arquivo principal do simulador que contém todas as funções
     ├── Makefile                 # Lógica de compilação
+    ├── processos.txt            # Processos que serão usados
     └── README.md                # Descrição do projeto
 
 ### ⚙️ Requisitos
@@ -30,7 +31,7 @@ Simular o comportamento de processos em um ambiente de escalonamento com:
 ### 🛠️ Instalação e Execução
 
 1. **Clone o repositório:**
-  ```git clone https://github.com/edufcarvalho/round-robin-feedback.git```
+  ```git clone https://github.com/edufcarvalho/simulador-escalonador.git```
 
 2. **Troque para a pasta correta:**
   ```cd round-robin-feedback```

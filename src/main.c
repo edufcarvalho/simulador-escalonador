@@ -63,7 +63,7 @@ void remove_io(IOQueue *queue, int PID);
 void remove_process(ProcessQueue *queue, int PID);
 
 ProcessQueue read_file(char *path) {
-  static int PID = 0;
+  static int PID = 1;
   int k = 0;
 
   FILE *file = fopen(path, "r");
@@ -101,9 +101,8 @@ ProcessQueue read_file(char *path) {
       new_io.type = input.self[i + 1];
       new_process.io.self[j++] = new_io;
     }
+    PID += 1;
   }
-
-  PID += 1;
 
   return processes;
 }
@@ -365,6 +364,7 @@ int main() {
 
   while (1) {
     process_entry(&processes, timer);
+
     printf("\nTEMPO = %d\n", timer);
 
     print_pids("Fila Finalizados", &finished);
@@ -375,7 +375,7 @@ int main() {
     print_pids_io("Fila Impressora", &printer);
     print_pids("Fila Bloqueados", &blocked);
     timer += 1;
-    sleep(100);
+    sleep(2);
   }
   return 0;
 }

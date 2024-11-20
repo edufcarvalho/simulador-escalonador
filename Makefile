@@ -3,7 +3,7 @@ CFLAGS = -Iinclude -Wall
 OBJDIR = obj
 SRCDIR = src
 
-OBJECTS = $(OBJDIR)/main.o $(OBJDIR)/process.o $(OBJDIR)/scheduler.o $(OBJDIR)/io.o
+OBJECTS = $(OBJDIR)/main.o
 TARGET = $(OBJDIR)/simulator
 
 all: $(TARGET)
