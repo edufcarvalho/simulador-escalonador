@@ -63,7 +63,7 @@ void remove_io(IOQueue *queue, int PID);
 void remove_process(ProcessQueue *queue, int PID);
 
 ProcessQueue read_file(char *path) {
-  static int PID = 0;
+  static int PID = 1;
   int k = 0;
 
   FILE *file = fopen(path, "r");
@@ -364,7 +364,6 @@ int main() {
 
   while (1) {
     process_entry(&processes, timer);
-    execute_processes();
 
     printf("\nTEMPO = %d\n", timer);
 
